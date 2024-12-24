@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Movie Collection Manager</h1>
+
+        <!-- Add Movie Form -->
+        <div class="form-container">
+            <h2>Add a New Movie</h2>
+            <form id="movie-form">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="genre" placeholder="Genre" required>
+                <input type="number" id="rating" placeholder="Rating" required>
+                <input type="number" id="releaseYear" placeholder="Release Year" required>
+                <button type="submit">Add Movie</button>
+            </form>
+        </div>
+
+        <!-- List Movies by Genre -->
+        <div class="movie-list">
+            <h2>Movies by Genre</h2>
+            <input type="text" id="genreFilter" placeholder="Filter by Genre" oninput="listMoviesByGenre()">
+            <ul id="moviesByGenre"></ul>
+        </div>
+
+        <!-- Highest Rated Movie -->
+        <div class="highest-rated">
+            <h2>Highest Rated Movie</h2>
+            <p id="highestRatedMovie"></p>
+        </div>
+
+        <!-- Movie Titles -->
+        <div class="movie-titles">
+            <h2>All Movie Titles</h2>
+            <ul id="movieTitles"></ul>
+        </div>
+
+        <!-- Movies After a Specific Year -->
+        <div class="movie-year-filter">
+            <h2>Movies Released After a Specific Year</h2>
+            <input type="number" id="yearFilter" placeholder="Enter Year" oninput="getMoviesAfterYear()">
+            <ul id="moviesAfterYear"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
